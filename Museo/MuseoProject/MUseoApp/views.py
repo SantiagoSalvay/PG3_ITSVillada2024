@@ -10,10 +10,10 @@ def primera_vista(request: HttpRequest):
 
 class PrimeraVista(View):
     def get(self, request, *args, **kwargs):
-        return render(request, "primeraClase.html")
+        return render(request, "index.html")
 
 class PrimerTemplateView(TemplateView):
-    template_name = "primeraClase.html"
+    template_name = "index.html"
 
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
