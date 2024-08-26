@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo</title>
+</head>
+<body>
+    <h1>Hola, esta es mi primera vista!</h1>
+    Y solo permito GET. <br />
+    Ejecutando una vista basada en funciones. <br />
+
+    <h2 class="">Lista de MUSEOS</h2>
+    {% for museo in museos %}
+    <div class="card">
+        <h5 class="card-header">{{ museo.id }}</h5>
+        <div class="card-body">
+            <h5 class="card-title">{{ museo.nombre }}</h5>
+            <p class="card-text">{{ museo.descripcion }}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>
